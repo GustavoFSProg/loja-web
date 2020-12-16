@@ -1,5 +1,6 @@
-import React, { useEffect, useState } from 'react'
+import React, { useState } from 'react'
 import api from './services/api'
+import { Container, ContainerLista, Lista, BodyContainer } from './style'
 
 function App() {
   const [lista, setLista] = useState([])
@@ -15,23 +16,22 @@ function App() {
 
   getAll()
 
-  // useEffect(() => {
-  //   getAll()
-  // })
   return (
-    <div className="App">
-      <header className="App-header">
+    <Container>
+      <BodyContainer>
         {lista.map((list) => {
           return (
             <ul key={list.id}>
-              <li>{list.title}</li>
-              <li>{list.description}</li>
-              <li>{list.title}</li>
-              <img
-                style={{ width: '18%' }}
-                src={`http://localhost:3001/files/${list.image}`}
-                alt="imagem"
-              />
+              <ContainerLista>
+                <Lista>{list.title}</Lista>
+                <Lista>{list.description}</Lista>
+                <Lista>{list.title}</Lista>
+                <img
+                  style={{ width: '25%' }}
+                  src={`https://loja-sistem.herokuapp.com/files/${list.image}`}
+                  alt="imagem"
+                />
+              </ContainerLista>
             </ul>
           )
         })}
@@ -44,8 +44,8 @@ function App() {
         >
           Learn React
         </a>
-      </header>
-    </div>
+      </BodyContainer>
+    </Container>
   )
 }
 
