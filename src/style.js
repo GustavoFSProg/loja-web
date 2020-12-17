@@ -15,7 +15,7 @@ export const BodyContainer = styled.div`
   display: flex;
   justify-content: center;
   flex-direction: column;
-  margin-left: -22px;
+  margin-left: -25px;
 `
 
 export const ContainerLista = styled.div`
@@ -24,6 +24,8 @@ export const ContainerLista = styled.div`
   border-radius: 8px;
   position: relative;
   border: 1px solid #d9d9d9;
+  display: flex;
+  flex-direction: column;
 `
 export const Lista = styled.ul`
   text-decoration: none;

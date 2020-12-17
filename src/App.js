@@ -23,14 +23,15 @@ function App() {
           return (
             <ul key={list.id}>
               <ContainerLista>
-                <Lista>{list.title}</Lista>
-                <Lista>{list.description}</Lista>
-                <Lista>{list.title}</Lista>
                 <img
                   style={{ width: '25%' }}
                   src={`https://loja-sistem.herokuapp.com/files/${list.image}`}
                   alt="imagem"
                 />
+
+                <Lista>{list.title}</Lista>
+                <Lista>{list.description}</Lista>
+                <Lista>{list.title}</Lista>
               </ContainerLista>
             </ul>
           )
