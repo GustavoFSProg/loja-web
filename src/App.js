@@ -25,6 +25,7 @@ function App() {
 
   return (
     <Container>
+      <h2>Loja Virtual</h2>
       <BodyContainer>
         {lista.map((list) => {
           return (
@@ -56,8 +57,6 @@ function App() {
             </ul>
           )
         })}
-
-       
       </BodyContainer>
     </Container>
   )
