@@ -7,6 +7,7 @@ import {
   Lista,
   BodyContainer,
   ContainerData,
+  TextContainer,
 } from './style'
 
 function App() {
@@ -26,6 +27,9 @@ function App() {
   return (
     <Container>
       <BodyContainer>
+        <TextContainer>
+          <h2>Loja Virtual</h2>
+        </TextContainer>
         {lista.map((list) => {
           return (
             <ul key={list.id}>
