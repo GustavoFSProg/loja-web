@@ -1,6 +1,13 @@
 import React, { useState } from 'react'
 import api from './services/api'
-import { Container, ContainerLista, Lista, BodyContainer } from './style'
+import {
+  ContainerImg,
+  Container,
+  ContainerLista,
+  Lista,
+  BodyContainer,
+  ContainerData,
+} from './style'
 
 function App() {
   const [lista, setLista] = useState([])
@@ -23,28 +30,34 @@ function App() {
           return (
             <ul key={list.id}>
               <ContainerLista>
-                <img
-                  style={{ width: '25%' }}
-                  src={`https://loja-sistem.herokuapp.com/files/${list.image}`}
-                  alt="imagem"
-                />
+                <ContainerImg>
+                  <img
+                    style={{ width: '25%' }}
+                    src={`https://loja-sistem.herokuapp.com/files/${list.image}`}
+                    alt="imagem"
+                  />
 
-                <Lista>{list.title}</Lista>
-                <Lista>{list.description}</Lista>
-                <Lista>{list.title}</Lista>
+                  <ContainerData>
+                    <Lista>
+                      <strong>Produto: </strong>
+                      {list.title}
+                    </Lista>
+                    <Lista>
+                      <strong>Descrição: </strong>
+                      {list.description}
+                    </Lista>
+                    <Lista>
+                      <strong>Preço: </strong>
+                      {list.price}
+                    </Lista>
+                  </ContainerData>
+                </ContainerImg>
               </ContainerLista>
             </ul>
           )
         })}
 
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+       
       </BodyContainer>
     </Container>
   )

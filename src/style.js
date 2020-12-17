@@ -11,6 +11,17 @@ export const Container = styled.div`
   justify-content: center;
   display: flex;
 `
+export const ContainerData = styled.div`
+  display: flex;
+  flex-direction: column;
+`
+
+export const ContainerImg = styled.div`
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+`
 export const BodyContainer = styled.div`
   display: flex;
   justify-content: center;
@@ -33,6 +44,15 @@ export const Lista = styled.ul`
   font-family: arial;
   font-size: 15px;
   /* margin-left: 10px; */
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande',
+    'Lucida Sans', Arial, sans-serif;
+  font-size: 12px;
+  padding-bottom: 4px;
+  margin-left: -20px;
+
+  @media screen and (min-width: 700px) {
+    font-size: 15px;
+  }
 `
 export const ListaUl = styled.ul`
   display: grid;
