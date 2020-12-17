@@ -26,6 +26,7 @@ function App() {
   return (
     <Container>
       <h2>Loja Virtual</h2>
+      <br />
       <BodyContainer>
         {lista.map((list) => {
           return (
