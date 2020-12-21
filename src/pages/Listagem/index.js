@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import { Link } from 'react-router-dom'
+import { Link, useHistory } from 'react-router-dom'
 import api from '../../services/api'
 import {
   ContainerImg,
@@ -13,7 +13,7 @@ import {
 
 function Listagem() {
   const [lista, setLista] = useState([])
-  // const history = useHistory()
+  const history = useHistory()
 
   async function getAll() {
     const { data } = await api.get('/')
@@ -29,7 +29,8 @@ function Listagem() {
 
   function getById(id) {
     localStorage.setItem('ID', id)
-    // history.push('/profile')
+
+    history.push('/profile')
   }
 
   useEffect(() => {
@@ -43,7 +44,6 @@ function Listagem() {
           <TextContainer>
             <h2>Loja Virtual</h2>
             <br />
-            <Link to="/profile">Ir pra Profile</Link>
           </TextContainer>
           {lista.map((list) => {
             return (
@@ -51,7 +51,7 @@ function Listagem() {
                 <ul key={list._id}>
                   <ContainerLista>
                     <button type="button" onClick={() => getById(list._id)}>
-                      Botao
+                      Detalhes
                     </button>
 
                     <ContainerImg>
