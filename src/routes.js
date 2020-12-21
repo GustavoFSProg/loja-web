@@ -1,6 +1,5 @@
 import React from 'react'
 import { BrowserRouter, Switch, Route } from 'react-router-dom'
-import Listagem from './pages/Listagem'
 import Profile from './pages/Profile'
 import Home from './pages/Home'
 
