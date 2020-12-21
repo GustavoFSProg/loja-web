@@ -1,5 +1,5 @@
-import React, { useState } from 'react'
-import { Link } from 'react-router-dom'
+import React, { useEffect, useState } from 'react'
+import { useHistory } from 'react-router-dom'
 import api from '../../services/api'
 import {
   ContainerImg,
@@ -11,19 +11,31 @@ import {
   TextContainer,
 } from './style'
 
-function Home() {
+function Listagem() {
   const [lista, setLista] = useState([])
+  const history = useHistory()
 
   async function getAll() {
     const { data } = await api.get('/')
 
     setLista(data)
 
+    console.log('Entrou!')
+
     console.log(`Lista: ${lista}`)
+
     return lista
   }
 
-  getAll()
+  function getById(id) {
+    localStorage.setItem('ID', id)
+
+    history.push('/profile')
+  }
+
+  useEffect(() => {
+    getAll()
+  })
 
   return (
     <>
@@ -31,13 +43,18 @@ function Home() {
         <BodyContainer>
           <TextContainer>
             <h2>Loja Virtual</h2>
+            <br />
           </TextContainer>
           {lista.map((list) => {
             return (
               <>
-                <Link to="/lista">Ir para Listagem</Link>
-                <ul key={list.id}>
+                <ul key={list._id}>
                   <ContainerLista>
+                    <button type="button" onClick={() => getById(list._id)}>
+                      Detalhes
+                    </button>
+                    <div style={{ paddingTop: '18px' }} />
+
                     <ContainerImg>
                       <img
                         style={{ width: '25%' }}
@@ -71,4 +88,4 @@ function Home() {
   )
 }
 
-export default Home
+export default Listagem
