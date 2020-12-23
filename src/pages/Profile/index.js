@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import api from '../../services/api'
+import Header from '../Header'
 import {
   ContainerImg,
   Container,
@@ -37,6 +38,8 @@ function Profile() {
     <>
       <Container>
         <BodyContainer>
+          <Header />
+
           <TextContainer>
             <h2>Loja Virtual</h2>
           </TextContainer>

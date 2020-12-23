@@ -10,6 +10,7 @@ import {
   ContainerData,
   TextContainer,
 } from './style'
+import Header from '../Header'
 
 function Listagem() {
   const [lista, setLista] = useState([])
@@ -41,6 +42,7 @@ function Listagem() {
     <>
       <Container>
         <BodyContainer>
+          <Header />
           <TextContainer>
             <h2>Loja Virtual</h2>
             <br />
@@ -52,6 +54,9 @@ function Listagem() {
                   <ContainerLista>
                     <button type="button" onClick={() => getById(list._id)}>
                       Detalhes
+                    </button>
+                    <button type="button" onClick={() => getById(list._id)}>
+                      Comprar
                     </button>
                     <div style={{ paddingTop: '18px' }} />
 
@@ -66,10 +71,6 @@ function Listagem() {
                         <Lista>
                           <strong>Produto: </strong>
                           {list.title}
-                        </Lista>
-                        <Lista>
-                          <strong>Descrição: </strong>
-                          {list.description}
                         </Lista>
                         <Lista>
                           <strong>Preço: </strong>
