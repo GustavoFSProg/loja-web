@@ -23,6 +23,21 @@ function Header() {
           </Link>
 
           <Link
+            to="/cart"
+            style={{
+              display: 'flex',
+              listStyle: 'none',
+              fontFamily: 'Trebuchet',
+              fontSize: '17px',
+              color: 'black',
+              textDecoration: 'none',
+              paddingRight: '13px',
+            }}
+          >
+            Carrinho
+          </Link>
+
+          <Link
             to="/"
             style={{
               display: 'flex',

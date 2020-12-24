@@ -68,6 +68,14 @@ function Profile() {
                   </Lista>
                 </ContainerData>
               </ContainerImg>
+              <button
+                type="button"
+                onClick={() => {
+                  alert('Compraste!!!')
+                }}
+              >
+                Comprar
+              </button>
             </ContainerLista>
           </ul>
         </BodyContainer>
