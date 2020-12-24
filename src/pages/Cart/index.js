@@ -5,6 +5,7 @@ import './App.css'
 import Title from '../../components/Title'
 import Input from '../../components/Input'
 import List from '../../components/List'
+import Header from '../Header'
 
 class Cart extends Component {
   state = {
@@ -33,17 +34,20 @@ class Cart extends Component {
 
   render() {
     return (
-      <div className="App col-md-4 col-md-offset-4">
-        <Title nome="Carrinho de compras" />
-        <Input addItem={this.onAdd} />
+      <>
+        <Header />
+        <div className="App col-md-4 col-md-offset-4">
+          <Title nome="Carrinho de compras" />
+          <Input addItem={this.onAdd} />
 
-        <List
-          itens={this.state.produtos}
-          precos={this.state.precos}
-          removeItem={this.onRemove}
-          titulo="Meu carrinho"
-        />
-      </div>
+          <List
+            itens={this.state.produtos}
+            precos={this.state.precos}
+            removeItem={this.onRemove}
+            titulo="Meu carrinho"
+          />
+        </div>
+      </>
     )
   }
 }
