@@ -1731,6 +1731,11 @@
   dependencies:
     "@sinonjs/commons" "^1.7.0"
 
+"@stripe/stripe-js@^1.11.0":
+  version "1.11.0"
+  resolved "https://registry.yarnpkg.com/@stripe/stripe-js/-/stripe-js-1.11.0.tgz#00e812d72a7760dae08237875066d263671478ee"
+  integrity sha512-SDNZKuETBEVkernd1tq8tL6wNfVKrl24Txs3p+4NYxoaIbNaEO7mrln/2Y/WRcQBWjagvhDIM5I6+X1rfK0qhQ==
+
 "@surma/rollup-plugin-off-main-thread@^1.1.1":
   version "1.4.2"
   resolved "https://registry.yarnpkg.com/@surma/rollup-plugin-off-main-thread/-/rollup-plugin-off-main-thread-1.4.2.tgz#e6786b6af5799f82f7ab3a82e53f6182d2b91a58"
@@ -3419,6 +3424,11 @@ capture-exit@^2.0.0:
   integrity sha512-PiT/hQmTonHhl/HFGN+Lx3JJUznrVYJ3+AQsnthneZbvW7x+f08Tk7yLJTLEOUvBTbduLeeBkxEaYXUOUrRq6g==
   dependencies:
     rsvp "^4.8.4"
+
+cart-localstorage@^1.1.5:
+  version "1.1.5"
+  resolved "https://registry.yarnpkg.com/cart-localstorage/-/cart-localstorage-1.1.5.tgz#7fdd0ef7cfdea113276a59b9e79a5826181acb4e"
+  integrity sha512-1LsiGklIV9bRj4qnT21HHMG6AGBzfH5Xu611H4FaNklx5Y7vq8vecKGMW9oxDpjoCga/NWAQ0mj/tYqfgTLqeg==
 
 case-sensitive-paths-webpack-plugin@2.3.0:
   version "2.3.0"
@@ -9633,6 +9643,11 @@ react-scripts@4.0.1:
   optionalDependencies:
     fsevents "^2.1.3"
 
+react-storage-hooks@^4.0.0:
+  version "4.0.1"
+  resolved "https://registry.yarnpkg.com/react-storage-hooks/-/react-storage-hooks-4.0.1.tgz#e30ed5cda48c77c431ecc02ec3824bd615f5b7fb"
+  integrity sha512-fetDkT5RDHGruc2NrdD1iqqoLuXgbx6AUpQSQLLkrCiJf8i97EtwJNXNTy3+GRfsATLG8TZgNc9lGRZOaU5yQA==
+
 react@^17.0.1:
   version "17.0.1"
   resolved "https://registry.yarnpkg.com/react/-/react-17.0.1.tgz#6e0600416bd57574e3f86d92edba3d9008726127"
@@ -11479,6 +11494,14 @@ url@^0.11.0:
     punycode "1.3.2"
     querystring "0.2.0"
 
+use-shopping-cart@^2.3.0:
+  version "2.3.0"
+  resolved "https://registry.yarnpkg.com/use-shopping-cart/-/use-shopping-cart-2.3.0.tgz#44bc973a58e401cc6e7349c0dbefddf5c89cd95e"
+  integrity sha512-5xJ1JQAXg5bqoEI1YzyrdLp9z5Ugf+En/YdbK5b5+mbc39yxUg5+y2FDe1cvyf8Anybo+HZfbgwFC4+JuCW3Pw==
+  dependencies:
+    react-storage-hooks "^4.0.0"
+    uuid "^8.3.1"
+
 use@^3.1.0:
   version "3.1.1"
   resolved "https://registry.yarnpkg.com/use/-/use-3.1.1.tgz#d50c8cac79a19fbc20f2911f56eb973f4e10070f"
@@ -11536,7 +11559,7 @@ uuid@^3.3.2, uuid@^3.4.0:
   resolved "https://registry.yarnpkg.com/uuid/-/uuid-3.4.0.tgz#b23e4358afa8a202fe7a100af1f5f883f02007ee"
   integrity sha512-HjSDRw6gZE5JMggctHBcjVak08+KEVhSIiDzFnT9S9aegmp85S/bReBVTb4QTFaRNptJ9kuYaNhnbNEOkbKb/A==
 
-uuid@^8.3.0:
+uuid@^8.3.0, uuid@^8.3.1:
   version "8.3.2"
   resolved "https://registry.yarnpkg.com/uuid/-/uuid-8.3.2.tgz#80d5b5ced271bb9af6c445f21a1a04c606cefbe2"
   integrity sha512-+NYs2QeMWy+GWFOEm9xnn6HCDp0l7QBD7ml8zLUmJ+93Q5NF0NocErnwkTkXVFNiX3/fpC6afS8Dhb/gz7R7eg==

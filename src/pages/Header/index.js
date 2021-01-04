@@ -52,7 +52,7 @@ function Header() {
             Profile
           </Link>
           <Link
-            to="/"
+            to="/register"
             style={{
               display: 'flex',
               listStyle: 'none',
