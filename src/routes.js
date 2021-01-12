@@ -3,7 +3,7 @@ import { BrowserRouter, Switch, Route } from 'react-router-dom'
 import Profile from './pages/Profile'
 import Home from './pages/Home'
 import Register from './pages/Register'
-import Cart from './pages/Cart'
+import Cart from './pages/Cart/Cart'
 
 export default function Routes() {
   return (
